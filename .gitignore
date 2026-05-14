@@ -1,0 +1,29 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Rider / IDE
+.idea/
+
+# VS Code workspace state (keep .vscode/launch.json etc. if you add them)
+.vscode/*.log
+
+# Node / Teams toolkit
+node_modules/
+*.log
+
+# Local env / secrets — never commit
+*.env
+appsettings.Development.json
+appsettings.local.json
+secrets.json
+
+# Teams app build output
+teams-app/teams-app.zip
+
+# OS
+.DS_Store
+Thumbs.db

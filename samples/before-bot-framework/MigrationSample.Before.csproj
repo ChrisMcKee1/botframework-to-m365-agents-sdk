@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MigrationSample.Before</RootNamespace>
+    <AssemblyName>MigrationSample.Before</AssemblyName>
+    <UserSecretsId>2e28411d-4873-4feb-937c-ce4db5394d11</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.10" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.23.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.23.1" />
+    <PackageReference Include="AdaptiveCards.Templating" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Cards\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

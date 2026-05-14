@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MigrationSample.After</RootNamespace>
+    <AssemblyName>MigrationSample.After</AssemblyName>
+    <UserSecretsId>0d60a1a4-cd10-40d1-ba9f-7267dafe0a47</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.Hosting.AspNetCore" Version="1.5.184" />
+    <PackageReference Include="Microsoft.Agents.Authentication.Msal" Version="1.5.184" />
+    <PackageReference Include="Microsoft.Agents.Builder.Dialogs" Version="1.5.184" />
+    <PackageReference Include="Microsoft.Agents.Extensions.Teams" Version="1.5.184" />
+    <PackageReference Include="AdaptiveCards.Templating" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Cards\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
