@@ -148,7 +148,7 @@ For grounding scenarios on enterprise content: the SDK doesn't ship a knowledge 
 
 ## Stretch goal for this repo (gated)
 
-Per PRD § 4.5: a second `after-agents-sdk-with-foundry/` sample that drops Azure AI Foundry + **Microsoft Agent Framework** into the same scenario to show the LUIS/QnA replacement pattern in practice. Build only if the team's existing bot uses LUIS or QnA — confirm scope first.
+A second `after-agents-sdk-with-foundry/` sample that drops Azure AI Foundry + **Microsoft Agent Framework** into the same scenario to show the LUIS/QnA replacement pattern in practice. Build only if the team's existing bot uses LUIS or QnA — confirm scope first.
 
 (Earlier drafts of this doc called for "Foundry + Semantic Kernel" here. Updated to Agent Framework to track the current MS Learn guidance.)
 

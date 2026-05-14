@@ -6,11 +6,11 @@ Bot Framework SDK is **archived**. Support ended **December 31, 2025**. The forw
 
 ## 5-minute tour
 
-1. **Read** [`PRD.md`](PRD.md) for scope and goals.
-2. **Skim** [`docs/03-migration-mapping.md`](docs/03-migration-mapping.md) for the canonical .NET / Node / Python deltas.
-3. **Open** [`samples/before-bot-framework/`](samples/before-bot-framework/) in VS Code. Run with **Bot Framework Emulator**.
-4. **Open** [`samples/after-agents-sdk/`](samples/after-agents-sdk/) in VS Code. Run with **Microsoft 365 Agents Playground**.
-5. **Diff** them with [`samples/side-by-side/`](samples/side-by-side/) — the annotated, file-by-file walk-through.
+1. **Skim** [`docs/03-migration-mapping.md`](docs/03-migration-mapping.md) for the canonical .NET / Node / Python deltas.
+2. **Open** [`samples/before-bot-framework/`](samples/before-bot-framework/) in VS Code. Run with **Bot Framework Emulator**.
+3. **Open** [`samples/after-agents-sdk/`](samples/after-agents-sdk/) in VS Code. Run with **Microsoft 365 Agents Playground**.
+4. **Diff** them with [`samples/side-by-side/`](samples/side-by-side/) — the annotated, file-by-file walk-through.
+5. **Plan** your own migration with [`docs/07-discovery-checklist.md`](docs/07-discovery-checklist.md) and [`docs/08-migration-playbook.md`](docs/08-migration-playbook.md).
 
 That's the whole repo. The docs are a migration playbook, not a textbook.
 
@@ -19,7 +19,6 @@ That's the whole repo. The docs are a migration playbook, not a textbook.
 ```
 .
 ├── README.md                            ← you are here
-├── PRD.md                               ← scope, goals, non-goals, acceptance
 ├── AGENTS.md                            ← ground rules for AI agents working in this repo
 ├── docs/                                ← migration playbook (read in order)
 │   ├── 01-bot-framework-overview.md     ← state of BF SDK + forward paths
@@ -48,6 +47,28 @@ Both samples implement the same thing:
 - After confirmation, subsequent messages echo as `"[name] said: [text]"`
 
 That's it. The point is to show that the *scenario* migrates with mechanical edits — different packages, namespaces, hosting, config. No re-architecting required.
+
+## Audience
+
+- **Pro-code dev teams** (.NET / Node / Python) maintaining an existing Bot Framework SDK v4 solution.
+- **Solution architects / leadership** who need confidence that the migration path is sound and that Azure resources (Bot registration, App ID, channels) are preserved.
+- **Migration leads** who need a reusable planning artifact before sizing work.
+
+## What's in scope
+
+- A runnable **before vs. after** in C# / .NET 8 with the same external behavior, so the deltas are concrete instead of theoretical.
+- A migration **playbook** that maps every concept a typical BF v4 codebase has to its Agents SDK replacement (packages, namespaces, types, configuration, auth, hosting, state, dialogs/middleware).
+- A **tooling chain** writeup (Microsoft 365 Agents Toolkit for VS / VS Code, Microsoft 365 Agents Playground, Bot Framework Emulator for legacy debug).
+- A **discovery checklist** that can be worked through in ~30 minutes to scope an actual migration.
+- Direction on the **AI / orchestration** story — how Azure AI Foundry / Microsoft Agent Framework slot into the same agent to retire LUIS/QnA dependencies.
+
+## What's not in scope
+
+- Migrating any specific production codebase. This is a reference.
+- Net-new agent capabilities. The goal is to demonstrate the migration, not extend the scenario.
+- Copilot Studio (low-code) or pure Teams AI Library paths in depth. They're mentioned as alternatives but not the focus.
+- JavaScript and Python sample projects — language deltas are documented in [`docs/03-migration-mapping.md`](docs/03-migration-mapping.md) but only C# / .NET 8 ships as a runnable sample.
+- A Java migration path — Java isn't on the Agents SDK roadmap.
 
 ## Prerequisites
 

@@ -93,7 +93,7 @@ If your team already runs logic in Foundry, the **proxy pattern is Microsoft-rec
 
 The SDK does not ship a knowledge layer. Wire in Azure AI Search (or equivalent) yourself. Agent Framework provides RAG context providers (Text Search, Azure AI Search, Neo4j GraphRAG) for this.
 
-## Stretch sample (PRD § 4.5)
+## Stretch sample (gated)
 
 A second `samples/after-agents-sdk-with-foundry/` is gated on whether your team's existing bot currently uses LUIS / QnA. If built, it should wire **Foundry + Microsoft Agent Framework** (not SK) per current MS Learn guidance. Confirm scope before building.
 
