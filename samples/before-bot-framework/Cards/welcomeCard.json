@@ -4,15 +4,23 @@
   "version": "1.4",
   "body": [
     {
-      "type": "TextBlock",
-      "size": "Large",
-      "weight": "Bolder",
-      "text": "Welcome, ${name}!"
-    },
-    {
-      "type": "TextBlock",
-      "text": "I'm the reference bot (Bot Framework SDK v4). I'll ask you a couple of questions to demonstrate state and dialogs. Type anything to begin.",
-      "wrap": true
+      "type": "Container",
+      "style": "default",
+      "bleed": true,
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "Large",
+          "weight": "Bolder",
+          "text": "Welcome, ${name}!"
+        },
+        {
+          "type": "TextBlock",
+          "text": "I'm the reference bot (Bot Framework SDK v4). I'll ask you a couple of questions to demonstrate state and dialogs. Type anything to begin.",
+          "wrap": true,
+          "spacing": "Small"
+        }
+      ]
     }
   ]
 }
